@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}<title>Login</title>{% endblock title %} 
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+       <div class="row">
+           <div class="col-md-2"></div>
+           <div class="col-md-8">
+                <div class="card mt-2">
+                    <img src="{% static 'img/ig.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body  mt-0">
+                    <h6 class="card-title text-muted">Sign in to see photos and videos from your friends</h6>
+                    <a href="#0" class="btn btn-sm btn-block btn-primary">Login with Facebook</a>
+                    <div class="row">
+                        <div class="col-md-5"><hr></div>
+                        <div class="col-md-2 px-0 text-center">
+                            <p class="text-muted">OR</p>
+                        </div>
+                        <div class="col-md-5"><hr></div>
+                    </div>
+                    
+                    {% include 'partials/_flash_messages.html' %}
+
+                    <form action="{% url 'authentication:login' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-sm" name="password" placeholder="Password" required>
+                        </div>
+                        <input class="btn btn-primary btn-block btn-sm" type="submit" value="Login">
+                    </form>
+                    <div class="card mt-1">
+                        <div class="card-body">
+                            <p class="text-center">
+                                 <a href="{% url 'authentication:register' %}">Register</a> <a href="{% url 'authentication:register' %}">Forgot password</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+           </div>
+           <div class="col-md-2"></div>
+       </div> 
+    </div>
+    <div class="col-md-3"></div>
+</div>
+{% endblock content %}
+
+
+

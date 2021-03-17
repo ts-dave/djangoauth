@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}<title>Register</title>{% endblock title %} 
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+       <div class="row">
+           <div class="col-md-2"></div>
+           <div class="col-md-8">
+                <div class="card mt-2">
+                    <img src="{% static 'img/ig.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body  mt-0">
+                    <h6 class="card-title text-muted">Sign in to see photos and videos from your friends</h6>
+                    <a href="#0" class="btn btn-sm btn-block btn-primary">Login with Facebook</a>
+                    <div class="row">
+                        <div class="col-md-5"><hr></div>
+                        <div class="col-md-2 px-0 text-center">
+                            <p class="text-muted">OR</p>
+                        </div>
+                        <div class="col-md-5"><hr></div>
+                    </div>
+                    
+                    {% include 'partials/_flash_messages.html' %}
+                        
+                    <form action="{% url 'authentication:register' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-sm" name="email" value="{{ data.email }}" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm" name="name" value="{{ data.name }}" placeholder="Fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm" name="username" value="{{ data.username }}" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-sm" name="password" value="" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-sm" name="password2" value="" placeholder="Confirm Password">
+                        </div>
+                        <input class="btn btn-primary btn-block btn-sm" type="submit" value="Register">
+                    </form>
+                    <small class="py-3">
+                        By signing up, you agree to our Terms, Data Policy and Cookies Policy
+                    </small>
+                </div>
+                </div>
+                <div class="card mt-1">
+                    <div class="card-body">
+                        <p class="text-center">
+                            Already have an account? <a href="{% url 'authentication:login' %}">Login</a> <a href="{% url 'authentication:request-reset-email' %}">Forgot password</a>
+                        </p>
+                    </div>
+                </div>
+           </div>
+           <div class="col-md-2"></div>
+       </div> 
+    </div>
+    <div class="col-md-3"></div>
+</div>
+{% endblock content %}
