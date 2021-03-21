@@ -2,16 +2,11 @@
 An authentication backend with django 
 [![Build Status](https://travis-ci.org/ts-dave/djangoauth.svg?branch=main)](https://travis-ci.org/ts-dave/djangoauth) [![codecov](https://codecov.io/gh/ts-dave/djangoauth/branch/main/graph/badge.svg?token=WBQ810PVJT)](https://codecov.io/gh/ts-dave/djangoauth)
 
-# MyAuth
-Authentication system in django
-
-
 ### Features
 * Sign up
 * Login
 * Logout
 * Email Verification
-* [TODO] Password reset
 
 ## Prerequisites
 * python >= 3.7
