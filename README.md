@@ -1,5 +1,4 @@
 # djangoauth
-An authentication backend with django 
 [![Build Status](https://travis-ci.org/ts-dave/djangoauth.svg?branch=main)](https://travis-ci.org/ts-dave/djangoauth) [![codecov](https://codecov.io/gh/ts-dave/djangoauth/branch/main/graph/badge.svg?token=WBQ810PVJT)](https://codecov.io/gh/ts-dave/djangoauth)
 
 ### Features
