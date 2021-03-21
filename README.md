@@ -5,7 +5,6 @@ An authentication backend with django
 # MyAuth
 Authentication system in django
 
-<img src="screenshot.png">
 
 ### Features
 * Sign up
