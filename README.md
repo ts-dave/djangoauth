@@ -5,7 +5,9 @@
 * Sign up
 * Login
 * Logout
-* Email Verification
+* Email Verification on sign up
+* Password reset
+* speeding up sending email using threading
 
 ## Prerequisites
 * python >= 3.7
