@@ -1,5 +1,5 @@
 # djangoauth
-[![Build Status](https://travis-ci.org/ts-dave/djangoauth.svg?branch=main)](https://travis-ci.org/ts-dave/djangoauth) ![Codecov](https://img.shields.io/codecov/c/github/ts-dave/djangoauth) ![Codecov](https://img.shields.io/codecov/c/github/ts-dave/djangoauth)
+[![Build Status](https://travis-ci.org/ts-dave/djangoauth.svg?branch=main)](https://travis-ci.org/ts-dave/djangoauth) ![Codecov](https://img.shields.io/codecov/c/github/ts-dave/djangoauth)
 
 ### Features
 * Sign up
